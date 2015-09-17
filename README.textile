@@ -21,7 +21,7 @@ h2. Example Usage
   $file_url = $this->s3_upload->upload_file($sample_file);
 
   var_dump($file_url);
-  // string(59) "https://s3.amazonaws.com/elections-taya/files/apple-561.gif"
+  // string(56) "https://s3.amazonaws.com/bucket-name/files/apple-561.gif"
 </code></pre>
 
 h2. References
