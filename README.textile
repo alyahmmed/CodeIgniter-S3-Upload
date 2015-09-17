@@ -1,0 +1,31 @@
+h1. Amazon S3 Upload Library for CodeIgniter
+
+Easily integrate your CI applications to Amazon's Simple Storage Solution with this library.
+
+h2. Setup
+
+# Create Amazon S3 account
+# Create a bucket for the files
+# Get Amazon S3 API key and secret
+# Edit config/s3.php with your appropriate settings
+# Copy config and library files to your CI installation
+
+h2. Example Usage
+
+<pre><code>
+  // Load Library
+  $this->load->library('s3_upload');
+  
+  // Upload file
+  $sample_file = APPPATH.'public/img/apple.gif';
+  $file_url = $this->s3_upload->upload_file($sample_file);
+
+  var_dump($file_url);
+  // string(59) "https://s3.amazonaws.com/elections-taya/files/apple-561.gif"
+</code></pre>
+
+h2. References
+
+* "Original Github repository":https://github.com/psugand/CodeIgniter-S3
+* "Original documentation for this class":http://undesigned.org.za/2007/10/22/amazon-s3-php-class/documentation
+* "Amazon S3 Documentation":http://docs.amazonwebservices.com/AmazonS3/2006-03-01/
