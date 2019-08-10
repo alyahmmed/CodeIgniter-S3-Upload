@@ -35,7 +35,7 @@ class S3_upload {
 			$mime_type
 		);
 		if ($saved) {
-			return $this->s3_url.$this->bucket_name.'/'.$this->folder_name.$s3_file;
+			return 'https://'.$this->bucket_name.'.s3.amazonaws.com/'.$this->folder_name.$s3_file;
 		}
 	}
 }
